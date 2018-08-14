@@ -1,0 +1,33 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Click For Quick Inst</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a routerLink="/home" routerLinkActive="active">Home </a></li>
+      <li><a routerLinkActive="active" (click)="getUsers()">Users</a></li>
+      <!-- <li><a routerLink = "/users" routerLinkActive="active" (click)="cook()">Users</a></li> -->
+      <li style="float: right;clear: right;"><a (click)="logout()" routerLinkActive="active">LogOut</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<div class="col-md-6 col-md-offset-3">
+  <h1>Hi {{currentUser}}!</h1>
+  <p>You're logged in with TallGrass!!</p>
+  <div *ngIf="users?.length>0">
+    <h3>All registered users:</h3>
+    <ul>
+      <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        <!-- - <a (click)="deleteUser(user.id)">Delete</a> -->
+      </li>
+    </ul>
+  </div>
+  <!-- <p><a [routerLink]="['/login']">Logout</a></p> -->
+
+</div>

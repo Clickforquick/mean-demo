@@ -1,0 +1,17 @@
+.imj{
+    
+    background-image: url(./../../assets/login.jpg); 
+    
+    height: 600px;
+    width: 1200px;
+    
+    /*
+    width: 100%;
+    height: auto;
+    */
+    /*background-size: 100% 100% ;
+    
+    /*background-size: cover;*/
+    
+    /*background-color: coral;*/
+}
